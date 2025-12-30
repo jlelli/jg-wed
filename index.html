@@ -8,7 +8,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body data-password="f@r@C@ld0">
+  <div class="gate hidden" id="gate" aria-hidden="true">
+    <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+      <h2 id="gate-title">Accesso riservato</h2>
+      <p class="muted">Inserisci la password per entrare nel sito.</p>
+      <form id="gate-form">
+        <input type="password" id="gate-input" name="password" placeholder="Password" autocomplete="current-password" required />
+        <button class="button" type="submit">Entra</button>
+        <p class="gate-error" id="gate-error" role="alert" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
   <header class="topbar" id="site-header">
     <div class="brand"><a href="#top" data-scroll>Juri &amp; Grazia</a></div>
 

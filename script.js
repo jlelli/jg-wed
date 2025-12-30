@@ -1,3 +1,48 @@
+const ACCESS_KEY = 'jgwed_access_granted';
+const gate = document.querySelector('#gate');
+const gateForm = document.querySelector('#gate-form');
+const gateInput = document.querySelector('#gate-input');
+const gateError = document.querySelector('#gate-error');
+const accessPassword = document.body?.dataset?.password ?? '';
+
+function unlockGate(){
+  document.body.classList.remove('locked');
+  gate?.classList.add('hidden');
+  gate?.setAttribute('aria-hidden', 'true');
+}
+
+function lockGate(){
+  if(!accessPassword) return;
+  document.body.classList.add('locked');
+  gate?.classList.remove('hidden');
+  gate?.setAttribute('aria-hidden', 'false');
+  setTimeout(() => gateInput?.focus(), 80);
+}
+
+if(accessPassword && localStorage.getItem(ACCESS_KEY) === 'true'){
+  unlockGate();
+}else if(accessPassword){
+  lockGate();
+}
+
+gateForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if(!accessPassword) return;
+  const value = gateInput?.value ?? '';
+  if(value === accessPassword){
+    localStorage.setItem(ACCESS_KEY, 'true');
+    gateError.textContent = '';
+    if(gateInput) gateInput.value = '';
+    unlockGate();
+    return;
+  }
+  gateError.textContent = 'Password errata. Riprova.';
+  if(gateInput){
+    gateInput.value = '';
+    gateInput.focus();
+  }
+});
+
 // Smooth scroll con offset (header sticky)
 const header = document.querySelector('.topbar');
 const links = document.querySelectorAll('[data-scroll]');
