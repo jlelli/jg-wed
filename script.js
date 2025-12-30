@@ -7,15 +7,21 @@ const accessPassword = document.body?.dataset?.password ?? '';
 
 function unlockGate(){
   document.body.classList.remove('locked');
-  gate?.classList.add('hidden');
-  gate?.setAttribute('aria-hidden', 'true');
+  if(gate){
+    gate.classList.add('hidden');
+    gate.hidden = true;
+    gate.setAttribute('aria-hidden', 'true');
+  }
 }
 
 function lockGate(){
   if(!accessPassword) return;
   document.body.classList.add('locked');
-  gate?.classList.remove('hidden');
-  gate?.setAttribute('aria-hidden', 'false');
+  if(gate){
+    gate.classList.remove('hidden');
+    gate.hidden = false;
+    gate.setAttribute('aria-hidden', 'false');
+  }
   setTimeout(() => gateInput?.focus(), 80);
 }
 
