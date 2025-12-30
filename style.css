@@ -219,3 +219,12 @@ h2{margin:0 0 18px; font-size:28px}
   }
   .topbar.open .nav a:first-child{border-top:none}
 }
+
+/* FAQ – caldo & consigli */
+#faq .card h3{
+  color: var(--accent);
+}
+
+#faq .card{
+  background: linear-gradient(180deg, #ffffff 0%, var(--accent-soft) 100%);
+}
