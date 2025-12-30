@@ -1,10 +1,11 @@
 :root{
-  --bg:#ffffff;
+  --bg:#fbf8f2;
   --fg:#111111;
   --muted:#555;
   --line:#e9e9e9;
-  --card:#fafafa;
-  --accent:#111;
+  --card:#ffffff;
+  --accent:#2f5d50;
+  --shadow: 0 10px 30px rgba(0,0,0,.06);
   --radius:18px;
   --max: 980px;
 }
@@ -98,6 +99,7 @@ h2{margin:0 0 18px; font-size:28px}
   border:1px solid var(--line);
   border-radius:var(--radius);
   padding:16px;
+  box-shadow: var(--shadow);
 }
 .card h3{margin:0 0 8px; font-size:16px}
 .muted{color:var(--muted)}
@@ -170,6 +172,7 @@ h2{margin:0 0 18px; font-size:28px}
   .topbar.open .nav a{
     padding:12px 14px;
     border-top:1px solid var(--line);
+    background:rgba(251,248,242,.9);
   }
   .topbar.open .nav a:first-child{border-top:none}
 }
