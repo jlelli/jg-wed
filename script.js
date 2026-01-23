@@ -176,7 +176,7 @@ const translations = {
     'arrive.shuttle.text': 'We are considering organizing a <strong>shuttle between Ostuni (partnered accommodations) and the masseria</strong>.<br /><br />It is not confirmed yet: any details (times, stops) will be shared later, if available.',
     'arrive.note': 'If you have any questions about getting around, just write to us.',
     'gift.title': 'Gift',
-    'gift.lead': 'Your presence is already so much.<br />Truly, we know how much it costs to attend and we\'re so happy you are giving us the chance to celebrate with you!<br /><br />If that still doesn\'t convince you and you\'d like to join us on our next trip...',
+    'gift.lead': 'Your presence is already so much.<br />Truly, we know how much it costs to attend and we\'re so happy you are giving us the chance to celebrate with you!<br /><br />If that still doesn\'t convince you and you\'d like to support our next trip...',
     'gift.details': '<strong>IBAN:</strong> IT08M0301503200000004779404<br /><strong>Account holder:</strong> Grazia Rutigliano<br /><strong>Bank:</strong> FINECO<br /><strong>Address:</strong> Piazza Durante 11 - 20131 Milano<br /><strong>Reference:</strong> Wedding gift for Juri and Grazia',
     'gift.charity': 'Part of the gift will be donated to <a href="https://www.greenpeace.org/italy/chi-siamo/" target="_blank" rel="noopener">Greenpeace</a> and <a href="https://sosmediterranee.it/" target="_blank" rel="noopener">SOS MEDITERRANEE</a>.',
     'rsvp.title': 'RSVP',
