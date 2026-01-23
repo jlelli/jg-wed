@@ -230,7 +230,7 @@ function applyTranslations(lang){
 
   if(langToggle){
     langToggle.textContent = dict['lang.switch'] ?? langToggle.textContent;
-    langToggle.setAttribute('aria-label', dict['lang.aria'] ?? langToggle.getAttribute('aria-label') || '');
+    langToggle.setAttribute('aria-label', (dict['lang.aria'] ?? langToggle.getAttribute('aria-label')) || '');
   }
   if(gateError && gateError.textContent){
     gateError.textContent = dict['gate.error'] ?? gateError.textContent;
