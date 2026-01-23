@@ -1,5 +1,21 @@
 const ACCESS_KEY = 'jgwed_access_granted';
 const LANGUAGE_KEY = 'jgwed_lang';
+const safeStorage = {
+  get(key){
+    try{
+      return localStorage.getItem(key);
+    }catch{
+      return null;
+    }
+  },
+  set(key, value){
+    try{
+      localStorage.setItem(key, value);
+    }catch{
+      // ignore storage errors (e.g. private mode)
+    }
+  },
+};
 const gate = document.querySelector('#gate');
 const gateForm = document.querySelector('#gate-form');
 const gateInput = document.querySelector('#gate-input');
@@ -190,7 +206,7 @@ const translations = {
   },
 };
 
-let currentLang = localStorage.getItem(LANGUAGE_KEY) || document.documentElement.lang || 'it';
+let currentLang = safeStorage.get(LANGUAGE_KEY) || document.documentElement.lang || 'it';
 
 function translateElementText(dict, selector, accessor, mutator){
   document.querySelectorAll(selector).forEach(el => {
@@ -226,7 +242,7 @@ function applyTranslations(lang){
 
 function setLanguage(lang){
   currentLang = translations[lang] ? lang : 'it';
-  localStorage.setItem(LANGUAGE_KEY, currentLang);
+  safeStorage.set(LANGUAGE_KEY, currentLang);
   applyTranslations(currentLang);
 }
 
@@ -250,7 +266,7 @@ function lockGate(){
   setTimeout(() => gateInput?.focus(), 80);
 }
 
-if(accessPassword && localStorage.getItem(ACCESS_KEY) === 'true'){
+if(accessPassword && safeStorage.get(ACCESS_KEY) === 'true'){
   unlockGate();
 }else if(accessPassword){
   lockGate();
@@ -269,7 +285,7 @@ gateForm?.addEventListener('submit', (e) => {
   if(!accessPassword) return;
   const value = gateInput?.value ?? '';
   if(value === accessPassword){
-    localStorage.setItem(ACCESS_KEY, 'true');
+    safeStorage.set(ACCESS_KEY, 'true');
     gateError.textContent = '';
     if(gateInput) gateInput.value = '';
     unlockGate();
