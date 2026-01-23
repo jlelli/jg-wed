@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Juri & Grazia — 19 luglio 2026</title>
-  <meta name="description"
+  <title data-i18n="meta.title">Juri & Grazia — 19 luglio 2026</title>
+  <meta name="description" data-i18n-content="meta.description"
     content="Informazioni, orari, come arrivare e RSVP per il matrimonio di Juri & Grazia a Masseria Montalbano." />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,75 +13,78 @@
 <body data-password="f@r@C@ld0">
   <div class="gate hidden" id="gate" aria-hidden="true" hidden>
     <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-      <h2 id="gate-title">Accesso riservato</h2>
-      <p class="muted">Inserisci la password per entrare nel sito.</p>
+      <h2 id="gate-title" data-i18n="gate.title">Accesso riservato</h2>
+      <p class="muted" data-i18n="gate.subtitle">Inserisci la password per entrare nel sito.</p>
       <form id="gate-form">
-        <input type="password" id="gate-input" name="password" placeholder="Password" autocomplete="current-password"
-          required />
-        <button class="button" type="submit">Entra</button>
+        <input type="password" id="gate-input" name="password" placeholder="Password" data-i18n-placeholder="gate.placeholder"
+          autocomplete="current-password" required />
+        <button class="button" type="submit" data-i18n="gate.button">Entra</button>
         <p class="gate-error" id="gate-error" role="alert" aria-live="polite"></p>
       </form>
     </div>
   </div>
   <header class="topbar" id="site-header">
-    <div class="brand"><a href="#top" data-scroll>Juri &amp; Grazia - Festa della nostra Unità</a></div>
+    <div class="brand"><a href="#top" data-scroll data-i18n="brand.title">Juri &amp; Grazia - Festa della nostra Unità</a></div>
 
-    <nav class="nav" aria-label="Navigazione principale">
-      <a href="#giorno" data-scroll>Il giorno</a>
-      <a href="#dove" data-scroll>Dove</a>
-      <a href="#dormire" data-scroll>Dormire</a>
-      <a href="#rsvp" data-scroll>RSVP</a>
-      <a href="#faq" data-scroll>FAQ</a>
+    <nav class="nav" aria-label="Navigazione principale" data-i18n-aria="nav.aria">
+      <a href="#giorno" data-scroll data-i18n="nav.day">Il giorno</a>
+      <a href="#dove" data-scroll data-i18n="nav.where">Dove</a>
+      <a href="#dormire" data-scroll data-i18n="nav.stay">Dormire</a>
+      <a href="#rsvp" data-scroll data-i18n="nav.rsvp">RSVP</a>
+      <a href="#faq" data-scroll data-i18n="nav.faq">FAQ</a>
     </nav>
 
-    <button class="menu" aria-label="Apri menu" aria-expanded="false">☰</button>
+    <div class="actions">
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Passa a inglese">English</button>
+      <button class="menu" aria-label="Apri menu" data-i18n-aria="menu.label" aria-expanded="false">☰</button>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="top">
       <div class="container">
-        <p class="kicker">19 luglio 2026 • Puglia</p>
-        <h1>Ci sposiamo! 💍</h1>
-        <p class="sub">
+        <p class="kicker" data-i18n="hero.kicker">19 luglio 2026 • Puglia</p>
+        <h1 data-i18n="hero.title">Ci sposiamo! 💍</h1>
+        <p class="sub" data-i18n-html="hero.subtitle">
           Una giornata semplice, bella, e (probabilmente) calda.<br />
           Portate voi stessi. Per il resto ci stiamo organizzando (giuriamo).
         </p>
 
         <div class="cta">
-          <a class="button" href="#rsvp" data-scroll>Conferma presenza</a>
-          <a class="button ghost" href="#dove" data-scroll>Come arrivare</a>
+          <a class="button" href="#rsvp" data-scroll data-i18n="hero.cta.primary">Conferma presenza</a>
+          <a class="button ghost" href="#dove" data-scroll data-i18n="hero.cta.secondary">Come arrivare</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="giorno">
       <div class="container">
-        <h2>Il giorno</h2>
+        <h2 data-i18n="day.title">Il giorno</h2>
 
         <div class="cards">
           <div class="card">
-            <h3>Quando</h3>
-            <p>Domenica <strong>19 luglio 2026</strong></p>
+            <h3 data-i18n="day.when.title">Quando</h3>
+            <p data-i18n-html="day.when.text">Domenica <strong>19 luglio 2026</strong></p>
           </div>
 
           <div class="card">
-            <h3>Come vestirsi</h3>
-            <p><strong>Eleganti ma comodi.</strong></p>
-            <p class="muted">Tacchi sottili: coraggiosi! Onestamente non servono..</p>
-            <p class="muted">Lino: apprezzatissimo.</p>
+            <h3 data-i18n="day.dress.title">Come vestirsi</h3>
+            <p data-i18n-html="day.dress.lead"><strong>Eleganti ma comodi.</strong></p>
+            <p class="muted" data-i18n="day.dress.note1">Tacchi sottili: coraggiosi! Onestamente non servono..</p>
+            <p class="muted" data-i18n="day.dress.note2">Lino: apprezzatissimo.</p>
           </div>
 
           <div class="card">
-            <h3>Programma</h3>
+            <h3 data-i18n="day.schedule.title">Programma</h3>
             <ul class="timeline" id="timeline">
-              <li><span>18:00</span> Arrivo ospiti</li>
-              <li><span>18:30</span> Rito civile</li>
-              <li><span>19:00</span> Aperitivo di benvenuto</li>
-              <li><span>20:30</span> Cena</li>
-              <li><span>23:00</span> Taglio torta</li>
-              <li><span>23:30</span> After party in piscina</li>
+              <li><span>18:00</span> <span data-i18n="day.schedule.time1">Arrivo ospiti</span></li>
+              <li><span>18:30</span> <span data-i18n="day.schedule.time2">Rito civile</span></li>
+              <li><span>19:00</span> <span data-i18n="day.schedule.time3">Aperitivo di benvenuto</span></li>
+              <li><span>20:30</span> <span data-i18n="day.schedule.time4">Cena</span></li>
+              <li><span>23:00</span> <span data-i18n="day.schedule.time5">Taglio torta</span></li>
+              <li><span>23:30</span> <span data-i18n="day.schedule.time6">After party in piscina</span></li>
             </ul>
-            <p class="muted tiny">Orari indicativi: il bello è non guardare l’orologio.</p>
+            <p class="muted tiny" data-i18n="day.schedule.note">Orari indicativi: il bello è non guardare l’orologio.</p>
           </div>
         </div>
       </div>
@@ -89,28 +92,28 @@
 
     <section class="section" id="dove">
       <div class="container">
-        <h2>Dove</h2>
+        <h2 data-i18n="where.title">Dove</h2>
 
         <div class="split">
           <div>
-            <p class="lead">
+            <p class="lead" data-i18n-html="where.venue">
               <strong>Masseria Montalbano</strong><br />
               SS16, km 871,800, 72017 Ostuni (BR)
             </p>
 
             <p class="muted tiny">
-              <a href="https://www.masseriamontalbano.it/" target="_blank" rel="noopener">Sito della masseria</a>
+              <a href="https://www.masseriamontalbano.it/" target="_blank" rel="noopener" data-i18n="where.site">Sito della masseria</a>
             </p>
 
             <div class="info">
-              <p><strong>Parcheggio:</strong> disponibile in struttura.</p>
+              <p data-i18n-html="where.parking"><strong>Parcheggio:</strong> disponibile in struttura.</p>
             </div>
 
-            <a class="button ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/X6VEZVCdTsusSUpe7">Apri
+            <a class="button ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/X6VEZVCdTsusSUpe7" data-i18n="where.maps">Apri
               su Google Maps</a>
           </div>
 
-          <div class="embed" aria-label="Mappa">
+          <div class="embed" aria-label="Mappa" data-i18n-aria="where.map.aria">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.6978907286543!2d17.49578687734!3d40.76866897138517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134644fb9e134ef1%3A0x7ea001e2dab3b61!2sMasseria%20Montalbano!5e0!3m2!1sit!2sit!4v1767078217691!5m2!1sit!2sit"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -122,23 +125,23 @@
 
     <section class="section" id="dormire">
       <div class="container">
-        <h2>Dormire</h2>
-        <p class="lead">
+        <h2 data-i18n="stay.title">Dormire</h2>
+        <p class="lead" data-i18n-html="stay.lead">
           Se venite da lontano: grazie ❤️<br />
           Abbiamo raccolto alcune opzioni comode nei dintorni.
         </p>
 
         <div class="cards">
           <div class="card">
-            <h3>Nei dintorni</h3>
-            <p class="muted">Strutture vicine </br> 
+            <h3 data-i18n="stay.nearby.title">Nei dintorni</h3>
+            <p class="muted" data-i18n-html="stay.nearby.note">Strutture vicine <br />
             (convenzione fino al <b>28 febbraio</b>!)</p>
-            <p><a href="https://docs.google.com/document/d/1t0yAO-VuwuHcZBvr_BjVwFPUqYzp_MQD8N167qXCU2E/edit?usp=sharing" target="_blank" rel="noopener">Apri la lista</a></p>
+            <p><a href="https://docs.google.com/document/d/1t0yAO-VuwuHcZBvr_BjVwFPUqYzp_MQD8N167qXCU2E/edit?usp=sharing" target="_blank" rel="noopener" data-i18n="stay.nearby.link">Apri la lista</a></p>
           </div>
 
           <div class="card">
-            <h3>Il giorno dopo</h3>
-            <p class="muted">
+            <h3 data-i18n="stay.after.title">Il giorno dopo</h3>
+            <p class="muted" data-i18n="stay.after.note">
               Domenica mattina saremo ancora in zona per salutarci con calma:
               caffè, chiacchiere e lento rientro alla realtà. Magari un salto al mare?
             </p>
@@ -149,12 +152,12 @@
 
     <section class="section" id="arrivare">
       <div class="container">
-        <h2>Come arrivare</h2>
+        <h2 data-i18n="arrive.title">Come arrivare</h2>
 
         <div class="cards">
           <div class="card">
-            <h3>Da Brindisi (BDS)</h3>
-            <p class="muted">
+            <h3 data-i18n="arrive.brindisi.title">Da Brindisi (BDS)</h3>
+            <p class="muted" data-i18n-html="arrive.brindisi.text">
               Circa 40 minuti in auto.<br />
               Auto a noleggio consigliata, con percorso diretto lungo la SS16
               in direzione Ostuni.
@@ -164,8 +167,8 @@
           </div>
 
           <div class="card">
-            <h3>Da Bari (BRI)</h3>
-            <p class="muted">
+            <h3 data-i18n="arrive.bari.title">Da Bari (BRI)</h3>
+            <p class="muted" data-i18n-html="arrive.bari.text">
               Circa 1 ora e 20 minuti in auto.<br />
               Auto a noleggio consigliata, percorrendo la SS16 verso sud
               in direzione Ostuni.
@@ -175,8 +178,8 @@
           </div>
 
           <div class="card">
-            <h3>Treno + auto</h3>
-            <p class="muted">
+            <h3 data-i18n="arrive.train.title">Treno + auto</h3>
+            <p class="muted" data-i18n-html="arrive.train.text">
               La stazione ferroviaria più vicina è <strong>Ostuni</strong>.<br />
               Dalla stazione è possibile proseguire in taxi
               oppure con un’auto a noleggio.
@@ -187,8 +190,8 @@
         </div>
 
         <div class="card card-spaced">
-          <h3>Navetta (in valutazione)</h3>
-          <p class="muted">
+          <h3 data-i18n="arrive.shuttle.title">Navetta (in valutazione)</h3>
+          <p class="muted" data-i18n-html="arrive.shuttle.text">
             Stiamo valutando la possibilità di organizzare una
             <strong>navetta tra Ostuni (strutture ricettive convenzionate)
               e la masseria</strong>.
@@ -199,7 +202,7 @@
           </p>
         </div>
 
-        <p class="tiny muted" style="margin-top:14px">
+        <p class="tiny muted" style="margin-top:14px" data-i18n="arrive.note">
           Per qualsiasi dubbio sugli spostamenti, scriveteci senza problemi.
         </p>
       </div>
@@ -207,8 +210,8 @@
 
     <section class="section" id="regalo">
       <div class="container">
-        <h2>Regalo</h2>
-        <p class="lead">
+        <h2 data-i18n="gift.title">Regalo</h2>
+        <p class="lead" data-i18n-html="gift.lead">
           La vostra presenza è già tantissimo.<br />
           Davvero, sappiamo quanto costa partecipare e siamo super felici che ci regaliate la possibilità di festeggiare
           con voi!<br /><br />
@@ -216,12 +219,12 @@
         </p>
 
         <div class="card">
-          <p><strong>IBAN:</strong> IT08M0301503200000004779404</br>
-          <strong>Intestato a:</strong> Grazia Rutigliano</br>
-          <strong>Banca:</strong> FINECO</br>
-          <strong>Indirizzo:</strong> Piazza Durante 11 - 20131 Milano</br>
+          <p data-i18n-html="gift.details"><strong>IBAN:</strong> IT08M0301503200000004779404<br />
+          <strong>Intestato a:</strong> Grazia Rutigliano<br />
+          <strong>Banca:</strong> FINECO<br />
+          <strong>Indirizzo:</strong> Piazza Durante 11 - 20131 Milano<br />
           <strong>Causale:</strong> Regalo matrimonio Juri e Grazia</p>
-          <p class="muted tiny">
+          <p class="muted tiny" data-i18n-html="gift.charity">
             Una parte del regalo sarà devoluto in beneficenza a
             <a href="https://www.greenpeace.org/italy/chi-siamo/" target="_blank" rel="noopener">Greenpeace</a> e
             <a href="https://sosmediterranee.it/" target="_blank" rel="noopener">SOS MEDITERRANEE</a>.
@@ -232,19 +235,19 @@
 
     <section class="section" id="rsvp">
       <div class="container">
-        <h2>RSVP</h2>
-        <p class="lead">
+        <h2 data-i18n="rsvp.title">RSVP</h2>
+        <p class="lead" data-i18n-html="rsvp.lead">
           Confermate la presenza entro <strong>15 maggio 2026</strong>.<br />
           È il modo più semplice per far funzionare tutto senza stress.
         </p>
 
-        <div class="embed form" aria-label="Modulo RSVP">
+        <div class="embed form" aria-label="Modulo RSVP" data-i18n-aria="rsvp.form.aria">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSfwik0QM7KyPxcpROjF--zUA5aRrDyO8-pATvrJgm_whsbkHg/viewform?embedded=true"
-            width="640" height="1263" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
+            width="640" height="1263" frameborder="0" marginheight="0" marginwidth="0" data-i18n="rsvp.loading">Caricamento…</iframe>
         </div>
 
-        <p class="tiny muted">
+        <p class="tiny muted" data-i18n="rsvp.note">
           Per qualunque dubbio: scriveteci su WhatsApp. Rispondiamo in tempi umani.
         </p>
       </div>
@@ -252,20 +255,20 @@
 
     <section class="section" id="faq">
       <div class="container">
-        <h2>Qualche dritta</h2>
+        <h2 data-i18n="faq.title">Qualche dritta</h2>
 
         <div class="cards">
           <div class="card">
-            <h3>Farà caldo?</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.hot.title">Farà caldo?</h3>
+            <p class="muted" data-i18n="faq.hot.text">
               Sì, probabilmente sì. Ma saremo all’aperto, al tramonto,
               con ombra e aria che gira. Sopravviveremo tutti. ☠️
             </p>
           </div>
 
           <div class="card">
-            <h3>Come vestirsi</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.dress.title">Come vestirsi</h3>
+            <p class="muted" data-i18n="faq.dress.text">
               Tessuti leggeri (lino, cotone) aiutano molto.
               Colori chiari consigliati. Tacchi sottili: bellissimi,
               ma il terreno non sempre collabora.
@@ -273,32 +276,32 @@
           </div>
 
           <div class="card">
-            <h3>Cambio extra</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.change.title">Cambio extra</h3>
+            <p class="muted" data-i18n="faq.change.text">
               Una camicia o t-shirt di ricambio può salvare la serata.
               Nessuno giudica, anzi.
             </p>
           </div>
 
           <div class="card">
-            <h3>After party in piscina</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.pool.title">After party in piscina</h3>
+            <p class="muted" data-i18n="faq.pool.text">
               Sì, ci sarà. Costume e telo consigliati
               per chi vuole continuare la festa in versione molto estiva.
             </p>
           </div>
 
           <div class="card">
-            <h3>Cosa portare</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.bring.title">Cosa portare</h3>
+            <p class="muted" data-i18n="faq.bring.text">
               Scarpe comode per ballare, borsa leggera,
               occhiali da sole e voglia di divertirsi.
             </p>
           </div>
 
           <div class="card">
-            <h3>Per i più piccoli</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.kids.title">Per i più piccoli</h3>
+            <p class="muted" data-i18n-html="faq.kids.text">
               Durante la giornata sarà presente un servizio di
               <strong>intrattenimento dedicato ai bambini (4–10 anni)</strong>,
               con attività pensate per farli divertire in sicurezza e permettere
@@ -309,8 +312,8 @@
           </div>
 
           <div class="card">
-            <h3>Animali in struttura</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.pets.title">Animali in struttura</h3>
+            <p class="muted" data-i18n="faq.pets.text">
               La Masseria Montalbano, per scelta della direzione, non accetta cani
               (anche di piccola taglia). È una regola pensata per evitare disturbi
               in caso di più cani presenti durante il matrimonio.
@@ -318,15 +321,15 @@
           </div>
 
           <div class="card">
-            <h3>Acqua &amp; ristoro</h3>
-            <p class="muted">
+            <h3 data-i18n="faq.water.title">Acqua &amp; ristoro</h3>
+            <p class="muted" data-i18n-html="faq.water.text">
               L’acqua non mancherà. Come del resto il vino!<br /><br />
               Bere spesso è sempre una buona idea (alternando, ovviamente 😅).
             </p>
           </div>
         </div>
 
-        <p class="tiny muted" style="margin-top:14px">
+        <p class="tiny muted" style="margin-top:14px" data-i18n="faq.note">
           Per qualsiasi dubbio: chiedeteci!
         </p>
       </div>
@@ -334,7 +337,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="tiny muted">Juri &amp; Grazia • 19 luglio 2026</p>
+        <p class="tiny muted" data-i18n="footer.text">Juri &amp; Grazia • 19 luglio 2026</p>
       </div>
     </footer>
   </main>
